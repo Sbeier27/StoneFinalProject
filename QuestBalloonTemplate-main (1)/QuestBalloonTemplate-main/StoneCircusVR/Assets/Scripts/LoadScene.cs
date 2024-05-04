@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
 
 public class LoadScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public string scene;
 
-    // Update is called once per frame
-    void Update()
+
+    // Start is called before the first frame update
+    public void OnCollisionEnter(Collision collision) 
     {
-        
+        if (collision.gameObject.name == "OVRCameraRig") 
+        {
+
+            UnityEngine.Application.LoadLevel(scene);
+
+
+        }
+
+
     }
 }
