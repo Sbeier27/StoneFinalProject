@@ -29,6 +29,7 @@ public class FollowCardboard : MonoBehaviour
                         * walk animation */
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, 5 * Time.deltaTime);
+            animator.Play("MimeWalk");
             if (target != null)    //if there is a target, the dog turns to look at them
             {
                 transform.LookAt(target);
