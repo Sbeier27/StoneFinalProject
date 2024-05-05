@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowCardboard : MonoBehaviour
 {
     public GameObject Player; //defines a player in the inspector to follow
-    public float Dis;  //a float to track the distance of the dog and player
+    public float Dis;  //a float to track the distance of the mime and player
     public Transform target;
     public Animator animator; //gathers an animator
 
@@ -23,14 +23,15 @@ public class FollowCardboard : MonoBehaviour
     void Update()
     {
         Dis = Vector3.Distance(transform.position, Player.transform.position);
-        //defines the distance between the dog and the player
+        //defines the distance between the mime and the player
 
-        if (Dis >= 5)  /*if the distance is greater or equal to 5, the dog moves towards the player while playing the dog 
+        if (Dis >= 5)  /*if the distance is greater or equal to 5, the mime moves towards the player while playing the dog 
                         * walk animation */
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, 5 * Time.deltaTime);
             animator.Play("MimeWalk");
-            if (target != null)    //if there is a target, the dog turns to look at them
+            
+            if (target != null)    //if there is a target, the mime turns to look at them
             {
                 transform.LookAt(target);
 
