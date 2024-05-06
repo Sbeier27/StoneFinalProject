@@ -5,20 +5,14 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class LoadScene : MonoBehaviour
 {
-    public string scene;
-
-
-    // Start is called before the first frame update
-    public void OnCollisionEnter(Collision collision) 
+    public int level;
+    
+    
+    void OnTriggerEnter(Collider ChangeScene) // can be Collider HardDick if you want.. I'm not judging you
     {
-        if (collision.gameObject.name == "OVRCameraRig") 
+        if (ChangeScene.gameObject.CompareTag("OVRPlayerController"))
         {
-
-            UnityEngine.Application.LoadLevel(scene);
-
-
+            UnityEngine.Application.LoadLevelAdditive(level); //1 is the build order it could be 1065 for you if you have that many scenes
         }
-
-
     }
 }
