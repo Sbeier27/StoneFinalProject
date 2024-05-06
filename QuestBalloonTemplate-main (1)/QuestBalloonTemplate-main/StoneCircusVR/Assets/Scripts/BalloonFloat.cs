@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BalloonFloat : OVRGrabbable
 {
-    public Rigidbody rb;
+    public Rigidbody rb; //defines the rigidbody
     public AudioSource source; //defines an audio source in the inspector
     public AudioClip clip;//defines an audio clip in the inspector
-    public GameObject balloon;
-    public GameObject spot;
+    public GameObject balloon; //defines in the inspector a balloon object
+    public GameObject spot; //defines a location in the inspector
     // Start is called before the first frame update
     /*void Start()
     {
@@ -21,7 +21,10 @@ public class BalloonFloat : OVRGrabbable
 
     }*/
 
-    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
+    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)  /*extending the OVRGrabbable class this overrides
+                                                                                    * the grab end function and makes whatever's released
+                                                                                    * float up into the sky before creating a copy in the 
+                                                                                    * original's spot, while playing an audio clip*/
     {
         base.GrabEnd(linearVelocity, angularVelocity);
         // Access the Rigidbody component of the grabbed object correctly

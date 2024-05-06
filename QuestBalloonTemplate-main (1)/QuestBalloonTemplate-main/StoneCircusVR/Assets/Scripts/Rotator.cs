@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    [SerializeField]private Vector3 rotator;
+    [SerializeField]private Vector3 rotator; //allows you to adjust the rotation in the inspector and define it
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotator * Time.deltaTime);
+        transform.Rotate(rotator * Time.deltaTime);//takes the attached object and rotates it multiplied by the time to give it speed
     }
 }

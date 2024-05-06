@@ -5,10 +5,11 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class LoadScene : MonoBehaviour
 {
-    public int level;
+    public int level; //gets the level number
     
     
-    void OnTriggerEnter(Collider ChangeScene) // can be Collider HardDick if you want.. I'm not judging you
+    void OnTriggerEnter(Collider ChangeScene) /*on triggering the event by colliding with the player object it loads the assigned scene
+                                               * taking the player there*/
     {
         if (ChangeScene.gameObject.CompareTag("OVRPlayerController"))
         {

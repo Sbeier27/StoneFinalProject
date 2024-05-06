@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class DartThrow : OVRGrabbable
 {
-    public Rigidbody rb;
-    public GameObject dart;
+    public Rigidbody rb; //gets a rigidboy
+    public GameObject dart; //gets the dart object
 
-    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
+    public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity) /*Overrides the GrabEnd function so when you let go of the
+                                                                                   * object it sends it forward, before creating another instance
+                                                                                   * of the object to be picked up*/
     {
         base.GrabEnd(linearVelocity, angularVelocity);
         // Access the Rigidbody component of the grabbed object correctly
