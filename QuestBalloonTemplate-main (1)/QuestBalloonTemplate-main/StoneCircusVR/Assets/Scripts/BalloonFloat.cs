@@ -35,7 +35,8 @@ public class BalloonFloat : OVRGrabbable
             rb.useGravity = false;
             rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange);
         }
-        Instantiate(balloon, spot.transform);
-        
+        Instantiate(balloon, spot.transform.position, spot.transform.rotation);
+
+
     }
 }

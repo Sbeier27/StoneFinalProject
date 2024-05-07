@@ -15,10 +15,8 @@ public class ScoreManager : MonoBehaviour
 
     IEnumerator SpawnTarget()
     {
-        while (true)
-        {
-            UpdateScore(5); //when it's time it calls the update score function to add 5 points
-        }
+        yield return new WaitForSeconds(1);
+        UpdateScore(5);
     }
     public void UpdateScore(int scoreToAdd) /*taking in and int of the score to add it then adds it to the current score
                                              * and then updates the text ui to display the score */

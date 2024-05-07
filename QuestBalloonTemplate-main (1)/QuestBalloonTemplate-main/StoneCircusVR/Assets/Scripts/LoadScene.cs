@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static System.Net.Mime.MediaTypeNames;
+using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    public int level; //gets the level number
+    public string level; //gets the level name
     
     
-    void OnTriggerEnter(Collider ChangeScene) /*on triggering the event by colliding with the player object it loads the assigned scene
+    void OnCollisionEnter(Collision collision) /*on triggering the event by colliding with the player object it loads the assigned scene
                                                * taking the player there*/
     {
-        if (ChangeScene.gameObject.CompareTag("OVRPlayerController"))
+        if (collision.gameObject.tag.Equals("PlayerController") == true)
         {
-            UnityEngine.Application.LoadLevelAdditive(level); //1 is the build order it could be 1065 for you if you have that many scenes
+            SceneManager.LoadScene(level); 
         }
     }
 }
