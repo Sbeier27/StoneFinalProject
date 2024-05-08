@@ -850,7 +850,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395154575}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 1, z: 1}
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d60497fa4a99642bd7596edcac9a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: CircusTent
 --- !u!1001 &433644334
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3099,6 +3099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerController
       objectReference: {fileID: 0}
+    - target: {fileID: 4926590347846174712, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4926590348205885351, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
       propertyPath: AimButton
       value: 536870912
@@ -3481,7 +3485,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613014497}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 1, z: 1}
@@ -3547,7 +3551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d60497fa4a99642bd7596edcac9a2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: MiniGames
 --- !u!4 &1613276843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3930796141337534530, guid: 7af9a027911ac174dab8ade25afbbbf9, type: 3}

@@ -15,17 +15,14 @@ public class BalloonPop : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision collision) /*on collision with the Dart object it destroys the balloon and then adds the 
-                                                       * point value to the score*/
+    void OnCollisionEnter(Collision collision)  /*on collision with the Dart object it destroys the balloon and then adds the 
+                                                 * point value to the score*/
     {
-        if (collision.gameObject.name == "Dart") 
+        if (collision.gameObject.tag.Equals("Dart") == true)
         {
             Destroy(Balloon);
             scoreManager.UpdateScore(pointValue);
-
         }
-
-
     }
-  
+
 }

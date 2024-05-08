@@ -12,7 +12,7 @@ public class LoadScene : MonoBehaviour
     void OnCollisionEnter(Collision collision) /*on triggering the event by colliding with the player object it loads the assigned scene
                                                * taking the player there*/
     {
-        if (collision.gameObject.tag.Equals("PlayerController") == true)
+        if (collision.gameObject.tag.Equals("Player") == true)
         {
             SceneManager.LoadScene(level); 
         }
