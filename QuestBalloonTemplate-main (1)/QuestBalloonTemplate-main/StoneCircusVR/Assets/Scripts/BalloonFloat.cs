@@ -7,6 +7,7 @@ public class BalloonFloat : OVRGrabbable
     public Rigidbody rb; //defines the rigidbody
     public AudioSource source; //defines an audio source in the inspector
     public AudioClip clip;//defines an audio clip in the inspector
+    public AudioClip clip2;
     public GameObject balloon; //defines in the inspector a balloon object
     public GameObject spot; //defines a location in the inspector
     // Start is called before the first frame update
@@ -30,6 +31,7 @@ public class BalloonFloat : OVRGrabbable
         // Access the Rigidbody component of the grabbed object correctly
         rb = gameObject.GetComponent<Rigidbody>();
         source.PlayOneShot(clip);
+        source.PlayOneShot(clip2);
         if (rb != null)
         {
             rb.useGravity = false;

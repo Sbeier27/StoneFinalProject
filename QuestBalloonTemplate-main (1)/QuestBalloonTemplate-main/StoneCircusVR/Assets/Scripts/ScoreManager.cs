@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     IEnumerator SpawnTarget()
     {
         yield return new WaitForSeconds(1);
-        UpdateScore(5);
+        UpdateScore(0);
     }
     public void UpdateScore(int scoreToAdd) /*taking in and int of the score to add it then adds it to the current score
                                              * and then updates the text ui to display the score */
